@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-@Component
-
 public class RandomStringServiceImpl implements RandomStringService {
 
     @Override
