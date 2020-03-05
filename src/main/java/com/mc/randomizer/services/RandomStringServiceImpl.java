@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.Random;
 
 @Component
-@Bean
+
 public class RandomStringServiceImpl implements RandomStringService {
 
     @Override

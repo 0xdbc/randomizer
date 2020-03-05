@@ -1,16 +1,16 @@
 package com.mc.randomizer.numbers;
 
 import com.mc.randomizer.common.RandomTypesGenerator;
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@AllArgsConstructor
 @Service
 public final class RndIntService {
 
-    private final RandomTypesGenerator rndGenerator;
+    @Autowired
+    private RandomTypesGenerator rndGenerator;
 
     public String getRandomIntAsString(RndIntRequest rndIntRequest) {
         return Optional.of(rndIntRequest)
