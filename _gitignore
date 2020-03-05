@@ -1,0 +1,10 @@
+.idea/*
+**/out/
+*.iml
+.gradle
+go!gradle-wrapper.jar
+*.log
+*.logs
+*.archive
+.DS_Store
+**/build/
