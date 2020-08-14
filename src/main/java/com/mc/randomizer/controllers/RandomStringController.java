@@ -1,9 +1,21 @@
 package com.mc.randomizer.controllers;
 
+import com.mc.randomizer.services.RandomStringService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-public interface RandomStringController {
+@RestController
+public class RandomStringController {
 
-    String generateRandomStr(Integer size);
+    @Autowired
+    private RandomStringService rss;
+
+    @GetMapping("/strings")
+
+    public String generateRandomStr(@RequestParam Integer size) {
+        return rss.getRandomString(size);
+    }
 }
